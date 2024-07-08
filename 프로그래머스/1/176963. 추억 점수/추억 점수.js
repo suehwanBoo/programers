@@ -6,7 +6,7 @@ function solution(name, yearning, photo) {
         let sum = 0
         pArr.forEach(name => {
             let point = missPoint[name]
-            if(point) sum += point
+            sum += point ?? 0
         })
         return sum
     })
