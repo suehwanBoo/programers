@@ -7,7 +7,6 @@ function solution(bandage, health, attacks) {
         const [time, damage] = attacks[i];
         const lastTime = time - 1 - prevTime;
         let totalHeal = (lastTime * perHeal) + ( Math.floor(lastTime / sec) * bonus ) ;
-        console.log(Math.floor(lastTime / sec))
         health = health + totalHeal > MAX_HEALTH ? MAX_HEALTH : health + totalHeal
         health -= damage
         prevTime = time;
